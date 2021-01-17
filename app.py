@@ -8,6 +8,9 @@ app = Flask(__name__)
 def home():
     return 'Hello'
     
+@app.route('/about')
+def about():
+    return 'Hello'
 
 if __name__ == '__main__':
     app.run(debug=True, port=4000)
