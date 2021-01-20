@@ -5,12 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/static/css/style.css">
     <link rel="stylesheet" type="text/css" href="/static/css/normalize.css">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap" rel="stylesheet">
 
-    <title>Up-Image</title>
 </head>
 <body>
-    <h1>Text 1</h1>
-    <h2>weqweq</h2>
+    <div class="container">
+
+        <div class="container_tittle">
+            <h1>Upload your image</h1>
+            <b>File should be Jpeg, Png,...</b>
+        </div>
+
+        <div class="container_img">
+        <form action="/" method="POST" enctype="multipart/form-data">
+            <div class="file-input">
+                <input type="file" class="file-input-img">
+                <label for="image"></label>
+            </div>
+        </form>
+        </div>
+
+        <div class="container_button">
+            <p>Or</p>
+            <input type="submit" value="choosee file">
+        </div>
+        {{ msm }}
+    </div>
 </body>
 </html>
