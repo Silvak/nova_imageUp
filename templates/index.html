@@ -10,20 +10,29 @@
     <title>Upimage</title>
 </head>
 <body>
-    <div class="center">
+    <div class="main">
         <div class="container">
             <div class="container_tittle">
                 <h1>Upload your image</h1>
                 <p>File should be Jpeg, Png...</p>
             </div>
-            <div class="container_img">
-            <form action="/" method="POST" enctype="multipart/form-data">
-                    <p><input  type="file" class="file-input" name="image" id="image"></p>
-                    <p> <label for="image" class="area"></label></p>  
-                <b>Or</b>
-                <button type="submit" class="btn btn-primary">Upload</button>
-            </form>
+
+            <div class="container_form">
+                <form action="/" method="POST" enctype="multipart/form-data">
+                        <p><input  type="file" class="file-input" name="image" id="image"></p> 
+                        <p> 
+                            <label type="file" for="image" class="area"> 
+                                <img src="\static\img\image_icon.png" alt="">
+                                <b>Drog & Drop your image here</b>
+                            </label>
+                        </p>  
+                        <p>Or</p>
+                    <div class="bt-form">
+                        <button type="submit" class="btn btn-primary">Upload</button>
+                    </div>
+                </form>
             </div>
+
         </div>
     </div>
 </body>
