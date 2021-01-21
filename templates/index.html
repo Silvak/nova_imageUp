@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/static/css/style.css">
     <link rel="stylesheet" type="text/css" href="/static/css/normalize.css">
-
+    <title>Upimage</title>
 </head>
 <body>
     <div class="container">
@@ -18,16 +18,12 @@
         <div class="container_img">
         <form action="/" method="POST" enctype="multipart/form-data">
             <div class="file-input">
-                <input type="file" class="file-input-img">
-                <label for="image"></label>
-                <p>Drog & Drop your image here</p>
+                <p><input  type="file" class="file-input-img" name="image" id="image"></p>
+                <img src="data:image/png;base64,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" alt="">
             </div>
-        </form>
-        </div>
-
-        <div class="container_button">
             <p>Or</p>
-            <input type="submit" value="choosee file">
+            <button type="submit" class="btn btn-primary">Upload</button>
+        </form>
         </div>
     </div>
 </body>
