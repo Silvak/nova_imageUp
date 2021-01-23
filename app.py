@@ -1,5 +1,6 @@
 import os
 from flask import Flask, render_template, request, redirect
+from flask.templating import render_template_string
 from werkzeug.utils import secure_filename
 
 UPLOAD_PATH = '/Users/Silvak/Desktop/Program/javascript/nova_imageUp/static/img/uploads'
@@ -46,8 +47,14 @@ def upload_image():
 
     return render_template('index.html')
 
+@app.route('/bar', methods=['GET', 'POST'])
+def bar():
+    return render_template('progress_bar.html')
 
 
+@app.route('/copy', methods=['GET', 'POST'])
+def copy():
+    return render_template('copy.html')
 
 if __name__ == '__main__':
     app.run(debug=True, port=4000)
